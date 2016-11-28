@@ -14,6 +14,7 @@
 		813B038B1DE446C8005E49B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 813B038A1DE446C8005E49B6 /* Assets.xcassets */; };
 		813B038E1DE446C8005E49B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 813B038C1DE446C8005E49B6 /* LaunchScreen.storyboard */; };
 		813B03971DE44BF6005E49B6 /* POIAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 813B03961DE44BF6005E49B6 /* POIAnnotation.m */; };
+		813B03DB1DEC4FE8005E49B6 /* AMapTipAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 813B03DA1DEC4FE8005E49B6 /* AMapTipAnnotation.m */; };
 		D88A103CB51B672AD510A31D /* libPods-PlaceSearchDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EF48A0B6A7E64B3711A7FF /* libPods-PlaceSearchDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,8 @@
 		813B038F1DE446C8005E49B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		813B03951DE44BF6005E49B6 /* POIAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POIAnnotation.h; sourceTree = "<group>"; };
 		813B03961DE44BF6005E49B6 /* POIAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POIAnnotation.m; sourceTree = "<group>"; };
+		813B03D91DEC4FE8005E49B6 /* AMapTipAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMapTipAnnotation.h; sourceTree = "<group>"; };
+		813B03DA1DEC4FE8005E49B6 /* AMapTipAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMapTipAnnotation.m; sourceTree = "<group>"; };
 		D0EF48A0B6A7E64B3711A7FF /* libPods-PlaceSearchDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PlaceSearchDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -74,6 +77,8 @@
 				813B03851DE446C8005E49B6 /* ViewController.m */,
 				813B03951DE44BF6005E49B6 /* POIAnnotation.h */,
 				813B03961DE44BF6005E49B6 /* POIAnnotation.m */,
+				813B03D91DEC4FE8005E49B6 /* AMapTipAnnotation.h */,
+				813B03DA1DEC4FE8005E49B6 /* AMapTipAnnotation.m */,
 				813B03871DE446C8005E49B6 /* Main.storyboard */,
 				813B038A1DE446C8005E49B6 /* Assets.xcassets */,
 				813B038C1DE446C8005E49B6 /* LaunchScreen.storyboard */,
@@ -234,6 +239,7 @@
 				813B03861DE446C8005E49B6 /* ViewController.m in Sources */,
 				813B03971DE44BF6005E49B6 /* POIAnnotation.m in Sources */,
 				813B03831DE446C8005E49B6 /* AppDelegate.m in Sources */,
+				813B03DB1DEC4FE8005E49B6 /* AMapTipAnnotation.m in Sources */,
 				813B03801DE446C8005E49B6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
