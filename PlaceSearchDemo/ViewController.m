@@ -69,7 +69,7 @@
     AMapInputTipsSearchRequest *tips = [[AMapInputTipsSearchRequest alloc] init];
     tips.keywords = key;
     tips.city     = kSearchCity;
-    //    tips.cityLimit = YES; 是否限制城市
+    tips.cityLimit = YES;
     
     [self.search AMapInputTipsSearch:tips];
 }
@@ -84,7 +84,7 @@
 - (void)searchPOIWithTip:(AMapTip *)tip
 {
     AMapPOIKeywordsSearchRequest *request = [[AMapPOIKeywordsSearchRequest alloc] init];
-    
+    request.cityLimit = YES;
     request.keywords         = tip.name;
     request.city             = kSearchCity;
     request.requireExtension = YES;
