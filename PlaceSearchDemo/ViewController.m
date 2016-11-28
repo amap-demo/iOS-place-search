@@ -11,6 +11,7 @@
 #import <AMapSearchKit/AMapSearchKit.h>
 #import <AMapFoundationKit/AMapFoundationKit.h>
 #import "POIAnnotation.h"
+#import "AMapTipAnnotation.h"
 
 #define kSearchCity @"北京"
 
@@ -95,7 +96,7 @@
 
 - (MAAnnotationView *)mapView:(MAMapView *)mapView viewForAnnotation:(id<MAAnnotation>)annotation
 {
-    if ([annotation isKindOfClass:[POIAnnotation class]])
+    if ([annotation isKindOfClass:[POIAnnotation class]] || [annotation isKindOfClass:[AMapTipAnnotation class]])
     {
         static NSString *tipIdentifier = @"poiIdentifier";
         
@@ -149,8 +150,6 @@
 /* POI 搜索回调. */
 - (void)onPOISearchDone:(AMapPOISearchBaseRequest *)request response:(AMapPOISearchResponse *)response
 {
-    [self.mapView removeAnnotations:self.mapView.annotations];
-    
     if (response.pois.count == 0)
     {
         return;
@@ -223,9 +222,21 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [self.mapView removeAnnotations:self.mapView.annotations];
+    
     AMapTip *tip = self.tips[indexPath.row];
     
-    [self searchPOIWithTip:tip];
+    if (tip.uid != nil && tip.location != nil) /* 可以直接在地图打点  */
+    {
+        AMapTipAnnotation *annotation = [[AMapTipAnnotation alloc] initWithMapTip:tip];
+        [self.mapView addAnnotation:annotation];
+        [self.mapView setCenterCoordinate:annotation.coordinate];
+        [self.mapView selectAnnotation:annotation animated:YES];
+    }
+    else
+    {
+        [self searchPOIWithTip:tip];
+    }
     
     self.searchController.active = NO;
 }
