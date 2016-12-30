@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A6CC8EE1E165C6100904F24 /* PlaceSearchDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6A6CC8ED1E165C6100904F24 /* PlaceSearchDemoUITests.m */; };
 		813B03801DE446C8005E49B6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 813B037F1DE446C8005E49B6 /* main.m */; };
 		813B03831DE446C8005E49B6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 813B03821DE446C8005E49B6 /* AppDelegate.m */; };
 		813B03861DE446C8005E49B6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 813B03851DE446C8005E49B6 /* ViewController.m */; };
@@ -18,9 +19,22 @@
 		D88A103CB51B672AD510A31D /* libPods-PlaceSearchDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D0EF48A0B6A7E64B3711A7FF /* libPods-PlaceSearchDemo.a */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		6A6CC8F01E165C6100904F24 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 813B03731DE446C8005E49B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 813B037A1DE446C8005E49B6;
+			remoteInfo = PlaceSearchDemo;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		25E2030A064AA5BC2FC0A80D /* Pods-PlaceSearchDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaceSearchDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlaceSearchDemo/Pods-PlaceSearchDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		3013F3425F5C76A892E63D88 /* Pods-PlaceSearchDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlaceSearchDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlaceSearchDemo/Pods-PlaceSearchDemo.release.xcconfig"; sourceTree = "<group>"; };
+		6A6CC8EB1E165C6100904F24 /* PlaceSearchDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlaceSearchDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A6CC8ED1E165C6100904F24 /* PlaceSearchDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlaceSearchDemoUITests.m; sourceTree = "<group>"; };
+		6A6CC8EF1E165C6100904F24 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		813B037B1DE446C8005E49B6 /* PlaceSearchDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlaceSearchDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		813B037F1DE446C8005E49B6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		813B03811DE446C8005E49B6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -39,6 +53,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6A6CC8E81E165C6100904F24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		813B03781DE446C8005E49B6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -50,10 +71,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A6CC8EC1E165C6100904F24 /* PlaceSearchDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6A6CC8ED1E165C6100904F24 /* PlaceSearchDemoUITests.m */,
+				6A6CC8EF1E165C6100904F24 /* Info.plist */,
+			);
+			path = PlaceSearchDemoUITests;
+			sourceTree = "<group>";
+		};
 		813B03721DE446C8005E49B6 = {
 			isa = PBXGroup;
 			children = (
 				813B037D1DE446C8005E49B6 /* PlaceSearchDemo */,
+				6A6CC8EC1E165C6100904F24 /* PlaceSearchDemoUITests */,
 				813B037C1DE446C8005E49B6 /* Products */,
 				BEEC09EA3DF1C26F0B12F4AB /* Pods */,
 				E831007C6DB5B76F4C79B78F /* Frameworks */,
@@ -64,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				813B037B1DE446C8005E49B6 /* PlaceSearchDemo.app */,
+				6A6CC8EB1E165C6100904F24 /* PlaceSearchDemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,6 +148,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		6A6CC8EA1E165C6100904F24 /* PlaceSearchDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6A6CC8F41E165C6100904F24 /* Build configuration list for PBXNativeTarget "PlaceSearchDemoUITests" */;
+			buildPhases = (
+				6A6CC8E71E165C6100904F24 /* Sources */,
+				6A6CC8E81E165C6100904F24 /* Frameworks */,
+				6A6CC8E91E165C6100904F24 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6A6CC8F11E165C6100904F24 /* PBXTargetDependency */,
+			);
+			name = PlaceSearchDemoUITests;
+			productName = PlaceSearchDemoUITests;
+			productReference = 6A6CC8EB1E165C6100904F24 /* PlaceSearchDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		813B037A1DE446C8005E49B6 /* PlaceSearchDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 813B03921DE446C8005E49B6 /* Build configuration list for PBXNativeTarget "PlaceSearchDemo" */;
@@ -145,6 +195,12 @@
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = AutoNavi;
 				TargetAttributes = {
+					6A6CC8EA1E165C6100904F24 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = YMJ372W38W;
+						ProvisioningStyle = Manual;
+						TestTargetID = 813B037A1DE446C8005E49B6;
+					};
 					813B037A1DE446C8005E49B6 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = YMJ372W38W;
@@ -166,11 +222,19 @@
 			projectRoot = "";
 			targets = (
 				813B037A1DE446C8005E49B6 /* PlaceSearchDemo */,
+				6A6CC8EA1E165C6100904F24 /* PlaceSearchDemoUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		6A6CC8E91E165C6100904F24 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		813B03791DE446C8005E49B6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -232,6 +296,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6A6CC8E71E165C6100904F24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6A6CC8EE1E165C6100904F24 /* PlaceSearchDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		813B03771DE446C8005E49B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -245,6 +317,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6A6CC8F11E165C6100904F24 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 813B037A1DE446C8005E49B6 /* PlaceSearchDemo */;
+			targetProxy = 6A6CC8F01E165C6100904F24 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		813B03871DE446C8005E49B6 /* Main.storyboard */ = {
@@ -266,6 +346,38 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		6A6CC8F21E165C6100904F24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				DEVELOPMENT_TEAM = YMJ372W38W;
+				INFOPLIST_FILE = PlaceSearchDemoUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.autonavi.PlaceSearchDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9b821a78-8ad6-4cf7-b6b0-31b43df04bbe";
+				PROVISIONING_PROFILE_SPECIFIER = openPlatform_development;
+				TEST_TARGET_NAME = PlaceSearchDemo;
+			};
+			name = Debug;
+		};
+		6A6CC8F31E165C6100904F24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				DEVELOPMENT_TEAM = YMJ372W38W;
+				INFOPLIST_FILE = PlaceSearchDemoUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.autonavi.PlaceSearchDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9b821a78-8ad6-4cf7-b6b0-31b43df04bbe";
+				PROVISIONING_PROFILE_SPECIFIER = openPlatform_development;
+				TEST_TARGET_NAME = PlaceSearchDemo;
+			};
+			name = Release;
+		};
 		813B03901DE446C8005E49B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -388,6 +500,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6A6CC8F41E165C6100904F24 /* Build configuration list for PBXNativeTarget "PlaceSearchDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A6CC8F21E165C6100904F24 /* Debug */,
+				6A6CC8F31E165C6100904F24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		813B03761DE446C8005E49B6 /* Build configuration list for PBXProject "PlaceSearchDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
