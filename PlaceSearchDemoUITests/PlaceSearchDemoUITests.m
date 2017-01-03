@@ -48,11 +48,7 @@
     [textField typeText:@"望京\n"];
     
     sleep(1);
-<<<<<<< Updated upstream
 
-=======
-    
->>>>>>> Stashed changes
     XCUIElement *cell = app.tables.staticTexts[@"\u671b\u4eacSOHO"];
     
     if (cell.exists) {
