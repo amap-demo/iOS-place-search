@@ -48,7 +48,11 @@
     [textField typeText:@"望京\n"];
     
     sleep(1);
+<<<<<<< Updated upstream
 
+=======
+    
+>>>>>>> Stashed changes
     XCUIElement *cell = app.tables.staticTexts[@"\u671b\u4eacSOHO"];
     
     if (cell.exists) {
@@ -66,7 +70,7 @@
 
     // wait
     XCTestExpectation *e = [self expectationWithDescription:@"empty wait"];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [e fulfill];
     });
     
