@@ -45,20 +45,23 @@
     [element tap];
     
     XCUIElement *textField = [[app searchFields] element];
-    [textField typeText:@"望京"];
+    [textField typeText:@"望京\n"];
     
-//    sleep(1);
-    
-//    XCUIElement *key = app.keys[@"\u641c\u7d22"];
-//    [key tap];
+    sleep(1);
+
     XCUIElement *cell = app.tables.staticTexts[@"\u671b\u4eacSOHO"];
     
-    if (cell.isHittable) {
-        [cell tap];
+    if (cell.exists) {
+        if (cell.isHittable) {
+            [cell tap];
+        }
+        else {
+            XCUICoordinate *coor = [cell coordinateWithNormalizedOffset:CGVectorMake(0.1, 0.1)];
+            [coor tap];
+        }
     }
     else {
-        XCUICoordinate *coor = [cell coordinateWithNormalizedOffset:CGVectorMake(0, 0)];
-        [coor tap];
+        [self recordFailureWithDescription:@"no search result" inFile:@__FILE__ atLine:__LINE__ expected:NO];
     }
 
     // wait
