@@ -7,3 +7,11 @@ pod 'AMap3DMap'
 pod 'AMapSearch'
 
 end
+
+
+target "PlaceSearchDemo-swift" do
+
+pod 'AMap3DMap'
+pod 'AMapSearch'
+
+end

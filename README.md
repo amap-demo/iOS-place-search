@@ -14,7 +14,7 @@
 | AMapSearchAPI	| - (void)AMapPOIKeywordsSearch:(AMapPOIKeywordsSearchRequest *)request; | POI 关键字查询接口 | v4.0.0 |
 
 ## 核心难点 ##
-
+`Objective-c`
 ```
 /* 输入提示回调. */
 - (void)onInputTipsSearchDone:(AMapInputTipsSearchRequest *)request response:(AMapInputTipsSearchResponse *)response
@@ -27,9 +27,7 @@
     [self.tips setArray:response.tips];
     [self.tableView reloadData];
 }
-```
 
-```
 /* POI 搜索回调. */
 - (void)onPOISearchDone:(AMapPOISearchBaseRequest *)request response:(AMapPOISearchResponse *)response
 {
@@ -61,5 +59,49 @@
     {
         [self.mapView showAnnotations:poiAnnotations animated:NO];
     }
+}
+```
+`swift`
+```
+/* 输入提示回调. */
+func onInputTipsSearchDone(_ request: AMapInputTipsSearchRequest!, response: AMapInputTipsSearchResponse!) {
+
+    if currentRequest == nil || currentRequest! != request {
+        return
+    }
+
+    if response.count == 0 {
+        return
+    }
+
+    tableData.removeAll()
+    for aTip in response.tips {
+        tableData.append(aTip)
+    }
+    tableView.reloadData()
+}
+
+/* POI 搜索回调. */
+func onPOISearchDone(_ request: AMapPOISearchBaseRequest!, response: AMapPOISearchResponse!) {
+    if response.count == 0 {
+        return
+    }
+
+    var poiAnnotations: [POIAnnotation] = Array()
+
+        for poi in response.pois {
+        let anno = POIAnnotation(poi: poi)
+        poiAnnotations.append(anno!)
+    }
+
+    mapView.addAnnotations(poiAnnotations)
+
+    if poiAnnotations.count == 1 {
+        mapView.centerCoordinate = (poiAnnotations.first?.coordinate)!
+    }
+    else {
+        mapView.showAnnotations(poiAnnotations, animated: false)
+    }
+
 }
 ```

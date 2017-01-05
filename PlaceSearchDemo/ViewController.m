@@ -75,13 +75,6 @@
     [self.search AMapInputTipsSearch:tips];
 }
 
-/* 清除annotations & overlays */
-- (void)clear
-{
-    [self.mapView removeAnnotations:self.mapView.annotations];
-    [self.mapView removeOverlays:self.mapView.overlays];
-}
-
 - (void)searchPOIWithTip:(AMapTip *)tip
 {
     AMapPOIKeywordsSearchRequest *request = [[AMapPOIKeywordsSearchRequest alloc] init];
