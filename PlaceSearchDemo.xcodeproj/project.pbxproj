@@ -202,7 +202,6 @@
 				6A2D0F521E1E33F70036ACED /* Sources */,
 				6A2D0F531E1E33F70036ACED /* Frameworks */,
 				6A2D0F541E1E33F70036ACED /* Resources */,
-				495D070D8DF67A01B6C1FA7F /* [CP] Embed Pods Frameworks */,
 				75C3584AA6056C4A0CB96E29 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -240,7 +239,6 @@
 				813B03771DE446C8005E49B6 /* Sources */,
 				813B03781DE446C8005E49B6 /* Frameworks */,
 				813B03791DE446C8005E49B6 /* Resources */,
-				BD5617CF4866D1A5B475FF49 /* [CP] Embed Pods Frameworks */,
 				6F8D71605BFC8AB56C932A59 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -285,6 +283,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -367,37 +366,22 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		495D070D8DF67A01B6C1FA7F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlaceSearchDemo-swift/Pods-PlaceSearchDemo-swift-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		6F8D71605BFC8AB56C932A59 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PlaceSearchDemo/Pods-PlaceSearchDemo-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-PlaceSearchDemo/Pods-PlaceSearchDemo-resources.sh",
 				"${PODS_ROOT}/AMap3DMap/MAMapKit.framework/AMap.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AMap.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlaceSearchDemo/Pods-PlaceSearchDemo-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PlaceSearchDemo/Pods-PlaceSearchDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		75C3584AA6056C4A0CB96E29 /* [CP] Copy Pods Resources */ = {
@@ -406,31 +390,16 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-PlaceSearchDemo-swift/Pods-PlaceSearchDemo-swift-resources.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-PlaceSearchDemo-swift/Pods-PlaceSearchDemo-swift-resources.sh",
 				"${PODS_ROOT}/AMap3DMap/MAMapKit.framework/AMap.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AMap.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlaceSearchDemo-swift/Pods-PlaceSearchDemo-swift-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BD5617CF4866D1A5B475FF49 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PlaceSearchDemo/Pods-PlaceSearchDemo-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PlaceSearchDemo-swift/Pods-PlaceSearchDemo-swift-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -530,7 +499,7 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(TARGET_NAME)/Swift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -552,7 +521,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = openPlatformInhouse;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(TARGET_NAME)/Swift-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
